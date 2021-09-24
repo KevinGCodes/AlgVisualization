@@ -1,0 +1,245 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.clicked {
+  border-radius: 20cm;
+}
+
+body{
+    background-color: white;
+    padding : 0px;
+}
+
+.header-elem {
+  color: white;
+  font-family: "Helvetica";
+}
+
+#logo {
+  background-color: rgb(180, 52, 52);
+  border: solid rgb(180, 52, 52);
+  border-radius: 0.8cm;
+  padding: 0.3cm;
+  opacity: 90%;
+}
+
+#logoP {
+  font-size: 1rem;
+  font-family: fantasy;
+  color: white;
+  text-decoration: none;
+}
+
+.header-elem:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: 540;
+}
+
+#header {
+  background-color: rgb(46, 46, 61);
+  display: flex;
+  padding: 0.5cm;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#cellDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.cell {
+  background-color: white;
+  border: solid black;
+  border-width: 2px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  align-items: center;
+}
+
+.cell.animation{
+    animation: fill-blue 1s running;
+}
+
+@keyframes fill-blue{
+    33%{
+        background-color: rgb(24, 24, 105);
+    }
+    66%{
+       background-color: rgb(47, 47, 192);
+       content: rect(7.5px, 7.5px, 15, 15);
+    }
+
+    100%{
+        background-color: rgb(92, 224, 213);
+    }
+}
+
+.cell.animation-path{
+    animation: fill-yellow 1s running;
+}
+
+@keyframes fill-yellow{
+    33%{
+        background-color: rgb(250, 231, 105);
+    }
+    66%{
+       background-color:rgb(212, 252, 66);
+       content: rect(7.5px, 7.5px, 15, 15);
+    }
+
+    100%{
+        background-color: rgb(230, 255, 4);
+    }
+}
+
+.cell.wall-animation{
+    animation: wall-animation 0.25s running;
+}
+
+@keyframes wall-animation{
+    0%{
+        background-color: white;
+    }
+    50%{
+        background-color: rgb(133, 131, 133);
+    }
+    100%{
+        background-color: rgb(25, 16, 41);
+    }
+}
+
+.target {
+  margin: auto;
+}
+
+#table {
+  display: inline-block;
+  position: absolute;
+  margin-left: 25%;
+  align-self: auto;
+  margin-top: 1.5%;
+  margin-bottom: 20px;
+
+}
+
+.bar-canvas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: absolute;
+    left: 0vh;
+    top: 20vh;
+    border: solid rgb(103, 120, 218);
+    border-width: 10px;
+    border-radius: 0.5cm;
+
+}
+#select-type {
+  display: flex;
+  position: absolute;
+  height: 20vh;
+  width: 50vh;
+  margin-left: 170;
+  margin-top: 170;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(74, 75, 74);
+  border-radius: 1cm;
+}
+
+#please-select{
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+ #option-div-sort-algs {
+  display: none;
+  width: 15%;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: 5%;
+  align-self: auto;
+  margin-left: 5%;
+  height: 400px;
+}
+
+#option-div-path-algs{
+    display: none;
+    width: 15%;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 5%;
+    align-self: auto;
+    margin-left: 5%;
+    height: 400px;
+  }
+
+#select-menu {
+  display: block;
+  border: solid rgb(86, 86, 167);
+  padding-top: 5px;
+  border-radius: 0.3cm;
+  border-width: 0.4rem;
+  height: 130px;
+  width: 150;
+}
+
+input[type="checkbox"] {
+  margin-left: 15px;
+}
+
+input[type="checkbox"]:checked {
+  color: black;
+}
+
+#visualize,
+#clear,#visualize-sort-alg,#randomize, #maze {
+  background-color: rgb(86, 86, 167);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  color: white;
+  border: transparent;
+  height: 40;
+  border-radius: 0.5cm;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#visualize:hover,
+#clear:hover, #visualize-sort-alg:hover,
+#randomize:hover, #maze:hover {
+  background-color: rgb(56, 165, 56);
+}
+#visualize:focus,
+#clear:focus, #visualize-sort-alg:focus,
+#randomize:focus, #maze:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+label {
+  font-family: "Helvetica";
+  font-weight: 500;
+}
+
+select {
+  border-radius: 1cm;
+  color: rgb(62, 70, 62);
+}
+
+select:focus {
+  outline: none;
+}
