@@ -1,2 +1,3 @@
 # AlgVisualization
 A Tool to visualize different types of algorithms including DFS, BFS, Dijkstra, Bubblesort,...
+This project is not finished yet, some of the allgorithm options available are not implemented yet and I plan on adding more in the future (including Graph Algorithms like Prim, Kruskal or Bellman-Ford)
